@@ -1,34 +1,35 @@
 package enemyTests;
 
-import enemies.Ogre;
+import enemies.Dragon;
 import org.junit.Before;
 import org.junit.Test;
 import players.fighters.Knight;
 
 import static org.junit.Assert.assertEquals;
 
-public class OgreTest {
+public class DragonTest {
 
-    Ogre ogre;
+    Dragon dragon;
 
     @Before
     public void before() {
-        ogre = new Ogre();
+        this.dragon = new Dragon();
     }
 
     @Test
     public void hasHealthPoints(){
-        assertEquals(75, ogre.getHealthPoints());
+        assertEquals(200, dragon.getHealthPoints());
     }
+
     @Test
     public void hasDefendPoints(){
-        assertEquals(10,ogre.getDefendPoints());
+        assertEquals(40, dragon.getDefendPoints());
     }
 
     @Test
     public void canDefend() {
         Knight knight = new Knight("Sir Allen of Kilbride");
-        knight.attack(ogre);
-        assertEquals(90, knight.getHealthPoints());
+        knight.attack(dragon);
+        assertEquals(60, knight.getHealthPoints());
     }
 }

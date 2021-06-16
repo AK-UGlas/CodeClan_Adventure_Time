@@ -1,11 +1,17 @@
 package players.mages;
 
-import items.Item;
+import items.Spell;
 
-import java.util.ArrayList;
+public class Warlock extends Mage {
 
-public class Warlock extends Mage{
+    private Spell spell;
+
     public Warlock(String name) {
         super(name);
+        spell = new Spell("leech", 10);
+    }
+
+    public Spell getSpell() {
+        return spell;
     }
 }

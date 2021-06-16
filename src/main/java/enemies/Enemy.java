@@ -18,6 +18,10 @@ public abstract class Enemy implements IDefend {
         this.defendPoints = defendPoints;
     }
 
+    public int getDefendPoints() {
+        return defendPoints;
+    }
+
     public void takeDamage(int damageTaken) {
         this.healthPoints -= damageTaken;
     }
