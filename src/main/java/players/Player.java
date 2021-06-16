@@ -41,4 +41,8 @@ public abstract class Player {
     public void useItem(Item item) {
         item.useItem(this);
     }
+
+    public int getBagItemCount() {
+        return bag.size();
+    }
 }

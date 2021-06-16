@@ -2,6 +2,7 @@ package playerTests;
 
 import enemies.Goblin;
 import enemies.Ogre;
+import items.Herbs;
 import items.Potion;
 import items.SpellType;
 import org.junit.Before;
@@ -43,5 +44,13 @@ public class BarbarianTest {
         barb.attack(ogre);
         barb.useItem(potion);
         assertEquals(95, barb.getHealthPoints());
+    }
+
+    @Test
+    public void canAddItemToBag(){
+        Herbs herbs = new Herbs(SpellType.HEALING, 10);
+        barb.addItemToBag(herbs);
+        assertEquals(1,barb.getBagItemCount());
+
     }
 }
