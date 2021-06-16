@@ -1,6 +1,9 @@
 package playerTests;
 
 import enemies.Goblin;
+import enemies.Ogre;
+import items.Potion;
+import items.SpellType;
 import org.junit.Before;
 import org.junit.Test;
 import players.fighters.Barbarian;
@@ -33,4 +36,12 @@ public class BarbarianTest {
         assertEquals(5, goblin.getHealthPoints());
     }
 
+    @Test
+    public void canUseItem() {
+        Potion potion = new Potion(SpellType.HEALING, 5);
+        Ogre ogre = new Ogre();
+        barb.attack(ogre);
+        barb.useItem(potion);
+        assertEquals(95, barb.getHealthPoints());
+    }
 }

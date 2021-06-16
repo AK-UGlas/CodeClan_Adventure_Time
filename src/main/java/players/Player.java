@@ -32,11 +32,11 @@ public abstract class Player {
         this.healthPoints -= damage;
     }
 
-    public ArrayList<Item> getBag() {
-        return bag;
+    public void addItemToBag(Item item) {
+        this.bag.add(item);
     }
 
-    public void setBag(ArrayList<Item> bag) {
-        this.bag = bag;
+    public void useItem(Item item) {
+        item.useItem(this);
     }
 }

@@ -1,5 +1,7 @@
 package items;
 
+import players.Player;
+
 public abstract class Item {
 
     private int power;
@@ -13,7 +15,13 @@ public abstract class Item {
         this.power = power;
     }
 
+    public int getPower() {
+        return power;
+    }
+
     public SpellType getSpellType() {
         return this.type;
     }
+
+    public abstract void useItem(Player player);
 }
