@@ -28,6 +28,8 @@ public abstract class Player {
         return healthPoints;
     }
 
+    public void setHealthPoints(int healthPoints) { this.healthPoints = healthPoints;}
+
     public void takeDamage(int damage) {
         this.healthPoints -= damage;
     }
