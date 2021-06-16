@@ -10,10 +10,10 @@ public abstract class Player {
     private int healthPoints;
     private ArrayList<Item> bag;
 
-    public Player(String name, ArrayList<Item> bag) {
+    public Player(String name) {
         this.name = name;
         this.healthPoints = 100;
-        this.bag = bag;
+        this.bag = new ArrayList<>();
     }
 
     public String getName() {
@@ -28,8 +28,8 @@ public abstract class Player {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
+    public void takeDamage(int damage) {
+        this.healthPoints -= damage;
     }
 
     public ArrayList<Item> getBag() {

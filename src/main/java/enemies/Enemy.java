@@ -22,8 +22,12 @@ public abstract class Enemy implements IDefend {
         this.healthPoints -= damageTaken;
     }
 
-    @Override
-    public void defend() {
+    public int getHealthPoints() {
+        return healthPoints;
+    }
 
+    @Override
+    public int defend() {
+        return defendPoints;
     }
 }

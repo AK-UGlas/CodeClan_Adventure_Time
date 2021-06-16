@@ -12,4 +12,8 @@ public abstract class Item {
     public void setPower(int power) {
         this.power = power;
     }
+
+    public SpellType getSpellType() {
+        return this.type;
+    }
 }

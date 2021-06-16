@@ -5,13 +5,8 @@ import items.Item;
 import java.util.ArrayList;
 
 public class Knight extends Fighter {
-    public Knight(String name, ArrayList<Item> bag) {
-        super(name, bag);
+    public Knight(String name) {
+        super(name);
         setAttackPower(10);
-    }
-
-    @Override
-    public void attack() {
-
     }
 }

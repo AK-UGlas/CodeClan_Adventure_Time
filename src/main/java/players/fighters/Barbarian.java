@@ -1,19 +1,9 @@
 package players.fighters;
 
-import items.Item;
-
-import java.util.ArrayList;
-
 public class Barbarian extends Fighter {
 
-    public Barbarian(String name, ArrayList<Item> bag) {
-        super(name, bag);
+    public Barbarian(String name) {
+        super(name);
         setAttackPower(20);
-    }
-
-
-    @Override
-    public void attack() {
-
     }
 }
