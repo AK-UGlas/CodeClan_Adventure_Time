@@ -1,14 +1,18 @@
 package players;
 
+import items.Item;
+
+import java.util.ArrayList;
+
 public abstract class Player {
 
     private String name;
     private int healthPoints;
     private ArrayList<Item> bag;
 
-    public Player(String name, int healthPoints, ArrayList<Item> bag) {
+    public Player(String name, ArrayList<Item> bag) {
         this.name = name;
-        this.healthPoints = healthPoints;
+        this.healthPoints = 100;
         this.bag = bag;
     }
 
